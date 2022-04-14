@@ -1,11 +1,11 @@
 body {
     height: 1000px;
-    background-image: url('https://centrebacderoda.com/wp-content/uploads/2019/03/shutterstock_622515404.jpg');
+    background-color: #273043;
 }
 
 .login {
-    font: oblique bold 120% cursive;
-    color: rgb(0, 0, 0);
+    font: oblique bold 120%;
+    color: #EFF6EE;
     left: 41%;
     top: 21%;
     padding-left: 650px;
@@ -19,4 +19,8 @@ h1 {
 
 button {
     width: 100%;
+}
+
+a {
+    text-align: right;
 }
