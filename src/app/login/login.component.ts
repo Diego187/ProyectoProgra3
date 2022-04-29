@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
       }
       else if(res!=null){
         localStorage.setItem("user",JSON.stringify(res));
-        location.href="/login"; 
+        location.href="/home"; 
       }
  
   
