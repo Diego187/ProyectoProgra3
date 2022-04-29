@@ -18,8 +18,11 @@
            <input type="password" placeholder="Contrasena"  class="form-control" [(ngModel)]="user.pass" [ngModelOptions]="{standalone: true}" required >
            </div>
             <button type="submit">Iniciar Sesión</button>
-
         </form>
+        <div *ngIf="usuarioInvalido" class="alert alert-danger" role="alert">
+            El usuario o la contrasena no es correcto.
+          </div>
+
         <button  (click)="crearUsuario()">Crear usuario</button>
     </div>
 
