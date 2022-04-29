@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.component.css">
+    <title>LOGIN</title>
+</head>
+<body>
+   
+    <div class="form-body">
+       <img src="https://c.tenor.com/COwudY0PrCcAAAAd/discord-logo-discord.gif"  >
+        <p class="text">Bienvenido de nuevo!</p>
+        <form class="login-form" (ngSubmit)="formulariologin()" id="loginForm" >
+            <input type="text" placeholder="Usuario" class="form-control" [(ngModel)]="user.user" [ngModelOptions]="{standalone: true}" required >
+            <div>
+           <input type="password" placeholder="Contrasena"  class="form-control" [(ngModel)]="user.pass" [ngModelOptions]="{standalone: true}" required >
+           </div>
+            <button type="submit">Iniciar Sesión</button>
+            <button>Crear usuario</button>
+        </form>
+    </div>
+
+</body>
+</html>
