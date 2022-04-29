@@ -38,14 +38,6 @@ body {
     margin-bottom: 25px;
 }
 
-<<<<<<< HEAD
-button {
-    width: 100%;
-}
-
-a {
-    text-align: right;
-=======
 .form-body input {
     display: block;
     margin: auto;
@@ -99,5 +91,4 @@ a {
     color: #d5dbdd;
     border: 2px solid #390099;
     background:linear-gradient(#5f5aa2,#5f5aa2);
->>>>>>> 5da9c15e41b6b488c80e2c4b166072a41b18085a
 }
