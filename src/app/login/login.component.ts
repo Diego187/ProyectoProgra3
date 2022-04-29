@@ -42,20 +42,27 @@ export class LoginComponent implements OnInit {
     }
   
     login(res:any){
-    
-      if(res==null){
+    console.log(res)
+      if(res.length == 0){
         this.usuarioInvalido=true;
+        console.log("paso por null")
       }
       else if(res=="e"){
-        alert("trono")
+        alert("No hay comunicación con el servidor!!")
       }
       else if(res!=null){
         localStorage.setItem("user",JSON.stringify(res));
+        console.log("pasa por diferente de null")
         location.href="/home"; 
       }
  
   
   
+    }
+
+
+    crearUsuario(){
+      location.href="/user-creation"; 
     }
   
     servicioLogin(){
