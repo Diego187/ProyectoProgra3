@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
   }  
 
     formulariologin(){
+      
       let formularioValido : any = document.getElementById("loginForm");
       if(formularioValido.reportValidity()){
         
@@ -41,20 +42,27 @@ export class LoginComponent implements OnInit {
     }
   
     login(res:any){
-                
-      if(res==null){
+    console.log(res)
+      if(res.length == 0){
         this.usuarioInvalido=true;
+        console.log("paso por null")
       }
       else if(res=="e"){
-        alert("trono")
+        alert("No hay comunicación con el servidor!!")
       }
       else if(res!=null){
         localStorage.setItem("user",JSON.stringify(res));
+        console.log("pasa por diferente de null")
         location.href="/home"; 
       }
-      console.log(res);
+ 
   
   
+    }
+
+
+    crearUsuario(){
+      location.href="/user-creation"; 
     }
   
     servicioLogin(){
@@ -64,7 +72,7 @@ export class LoginComponent implements OnInit {
         })
       }
   
-      return this.http.post<any>("http://localhost:3606/login/user", this.user, httpOptions).pipe(
+      return this.http.post<any>("http://localhost:4042/login/user", this.user, httpOptions).pipe(
         catchError(e=>"e")
       )
   
