@@ -70,8 +70,9 @@ export class LoginComponent implements OnInit {
   
     }
 
-
-
-  
+    createuser(user:any){
+      localStorage.setItem("user",JSON.stringify(user));
+      location.href="/home";
+    }
 
 }
