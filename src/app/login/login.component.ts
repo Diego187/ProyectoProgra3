@@ -31,7 +31,8 @@ export class LoginComponent implements OnInit {
   }  
 
     formulariologin(){
-      let formularioValido : any = document.getElementById("loginform");
+      
+      let formularioValido : any = document.getElementById("loginForm");
       if(formularioValido.reportValidity()){
         
         this.servicioLogin().subscribe(
@@ -41,7 +42,7 @@ export class LoginComponent implements OnInit {
     }
   
     login(res:any){
-                
+    
       if(res==null){
         this.usuarioInvalido=true;
       }
@@ -52,7 +53,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("user",JSON.stringify(res));
         location.href="/login"; 
       }
-      console.log(res);
+ 
   
   
     }
@@ -64,7 +65,7 @@ export class LoginComponent implements OnInit {
         })
       }
   
-      return this.http.post<any>("http://localhost:3606/login/user", this.user, httpOptions).pipe(
+      return this.http.post<any>("http://localhost:4042/login/user", this.user, httpOptions).pipe(
         catchError(e=>"e")
       )
   
