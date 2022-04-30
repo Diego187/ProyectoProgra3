@@ -17,9 +17,50 @@
     --md: 16px;
     --lg: 18px;
 }
+nav{
+  background-color: #0d0085;
+  border: none;
+}
+.tex{
+  text-align: center;
+  color: white !important;
+}
+.botoncanal{
+  background-image: url(https://www.psicoactiva.com/wp-content/uploads/2013/06/informatica-psicologia-mente.jpg);
+  background-repeat:no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius:25px 25px 25px 25px;
+  border: none;
+}
+.botonagregar{
+  background-image: url(https://cdn-icons-png.flaticon.com/512/117/117885.png);
+  background-repeat:no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius:25px 25px 25px 25px;
+  border: none;
+}
+.usuario{
+  float: left;
+  padding-right: 700px;
+  color: white;
+}
 body { 
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(27deg, #5448c8 50%,#7776bc 50%);
+    height: 875px;
   }
   .cards-container {
     display: grid;
@@ -29,6 +70,7 @@ body {
   }
   .product-card {
     width: 240px;
+    text-align: center;
   }
   .product-card img {
     width: 240px;
@@ -37,10 +79,7 @@ body {
     object-fit: cover;
   }
   .product-info {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 12px;
   }
   .product-info figure {
     margin: 0;

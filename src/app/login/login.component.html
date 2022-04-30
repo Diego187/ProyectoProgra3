@@ -10,16 +10,20 @@
 <body>
    
     <div class="form-body">
-       <img src="https://c.tenor.com/COwudY0PrCcAAAAd/discord-logo-discord.gif"  >
+       <img src="https://www.tuexperto.com/wp-content/uploads/2017/02/giphy-2.gif"  >
         <p class="text">Bienvenido de nuevo!</p>
         <form class="login-form" (ngSubmit)="formulariologin()" id="loginForm" >
-            <input type="text" placeholder="Usuario" class="form-control" [(ngModel)]="user.user" [ngModelOptions]="{standalone: true}" required >
+            <input type="text" style="text-transform:uppercase;" placeholder="Usuario" class="form-control" [(ngModel)]="user.user" [ngModelOptions]="{standalone: true}" required >
             <div>
            <input type="password" placeholder="Contrasena"  class="form-control" [(ngModel)]="user.pass" [ngModelOptions]="{standalone: true}" required >
            </div>
             <button type="submit">Iniciar Sesión</button>
-            <button>Crear usuario</button>
         </form>
+        <div *ngIf="usuarioInvalido" class="alert alert-danger" role="alert">
+            El usuario o la contrasena no es correcto.
+          </div>
+
+        <button  (click)="crearUsuario()">Crear usuario</button>
     </div>
 
 </body>

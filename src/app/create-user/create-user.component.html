@@ -1,0 +1,71 @@
+<body>
+    <form (ngSubmit)="formCreateUser()" id="formularioCrearAlumno">
+
+        <div class="container">
+            <br>
+            <br>
+
+            <h1 id="encabezado">Crea tu cuenta</h1>
+            <br><br>
+            <div class="mb-3 row">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-8 ">
+                    <label class="col-sm-2 col-form-label">Nombre</label>
+                    <div class="col-sm-10">
+                        <input required placeholder="Cristian" type="text" class="form-control" id="nombre" pattern="[0-9]{1,8}">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-8 ">
+                    <label class="col-sm-2 col-form-label">Apellido</label>
+                    <div class="col-sm-10">
+                        <input required placeholder="Caceres" type="text" class="form-control" id="apellido" pattern="[a-z A-Z]{1,25}">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-8 ">
+                    <label class="col-sm-2 col-form-label">Teléfono</label>
+                    <div class="col-sm-10">
+                        <input required placeholder="12345678" type="text" class="form-control" id="telefono" pattern="[1-9]{8}">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-8 ">
+                    <label class="col-sm-2 col-form-label">Dirección</label>
+                    <div class="col-sm-10">
+                        <input required placeholder="2da Calle 3-30 Zona 1 Guatemala" type="text" class="form-control" id="nombre" pattern="[a-z A-Z]{1,25}">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-8 ">
+                    <label class="col-sm-2 col-form-label">Contraseña</label>
+                    <div class="col-sm-10">
+                        <input required placeholder=" ********* " type="password" class="form-control " id="contrasena " pattern="[a-z1-9]{1,15}">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row ">
+                <div class="col-md-3 ">&nbsp;</div>
+                <div class="col-md-8 ">
+                    <label class="col-sm-4 col-form-label ">Confirmar Contraseña</label>
+                    <div class="col-sm-10 ">
+                        <input required placeholder="********* " type="password" class="form-control " id="confContrasena " pattern="[a-z1-9]{1,15}">
+                        <br>
+                        <button type="submit" class=" btn btn-primary">Crear mi cuenta</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+</body>
