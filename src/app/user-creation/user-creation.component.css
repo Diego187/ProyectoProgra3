@@ -7,6 +7,10 @@ body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
 }
+nav{
+    background-color: #0d0085;
+  border: none;
+}
 
 .login {
     width: 100%;
