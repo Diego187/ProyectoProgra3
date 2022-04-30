@@ -15,8 +15,9 @@
       <div class="form-container">
         <h1 class="title">My account</h1>
   
-        <form (ngSubmit)="createAccount()" id="form">
+        <form action="/" (ngSubmit)="createAccount()" id="form">
           <div>
+            
             <label for="first-name" class="label">Primer nombre</label>
             <input type="text" id="first-name" placeholder="Ej: Fernando" class="input input-first-name" [(ngModel)]="users.firstName" [ngModelOptions]="{standalone:true}" required>
   
