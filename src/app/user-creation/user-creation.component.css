@@ -14,7 +14,7 @@ body {
   width: 300px;
 }
 .title {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 36px;
   text-align: start;
   font-weight: bold;
@@ -28,7 +28,7 @@ body {
   flex-direction: column;
 }
 .label {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 4px;
 }
@@ -38,7 +38,7 @@ body {
   border-radius: 8px;
   height: 30px;
   font-size: 16px;
-  padding: 6px;
+  padding: 30px;
   margin-bottom: 12px;
 }
 .input-first-name,
