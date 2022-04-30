@@ -1,4 +1,9 @@
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 900px;
+    background: linear-gradient(27deg, #5448c8 50%, #7776bc 50%);
     margin: 0;
     font-family: 'Quicksand', sans-serif;
 }
@@ -21,6 +26,7 @@ body {
     margin-bottom: 36px;
     text-align: start;
     font-weight: bold;
+    color: #FFFFFF;
 }
 
 .form {
@@ -37,6 +43,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 4px;
+    color: #e7f5ff;
 }
 
 .input {
