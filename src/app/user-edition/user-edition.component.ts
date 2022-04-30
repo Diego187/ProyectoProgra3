@@ -4,19 +4,22 @@ import {catchError} from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
 
 @Component({
-  selector: 'app-user-creation',
-  templateUrl: './user-creation.component.html',
-  styleUrls: ['./user-creation.component.css']
+  selector: 'app-user-edition',
+  templateUrl: './user-edition.component.html',
+  styleUrls: ['./user-edition.component.css']
 })
-export class UserCreationComponent implements OnInit {
+export class UserEditionComponent implements OnInit {
   users:any={};
   // respuesta:String="";
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
+    this.users = localStorage.getItem("user");
+    this.users = JSON.parse(this.users);
+    this.users = this.users[0];
   }
 
-  consult(){
+  consult(){ 
     location.href="/";
   }
 
@@ -34,7 +37,7 @@ export class UserCreationComponent implements OnInit {
         'Content-Type':'application/json'
       })
     }
-    return this.http.post<any>("http://localhost:4042/user/add", this.users, httpOptions).pipe(
+    return this.http.post<any>("http://localhost:4042/user/modify", this.users, httpOptions).pipe(
       catchError(e=>"e")
     )
   }
@@ -45,7 +48,7 @@ export class UserCreationComponent implements OnInit {
       console.log("Error peticion");
     }else{
     this.users = {};
-    alert("Bienvenido! su nuevo usuario es: "+res.user)
+    alert("Usuario: "+res.user+" editado con exito, por favor autenticate de nuevo")
       localStorage.setItem("user", JSON.stringify(res))
     location.href=""
   }

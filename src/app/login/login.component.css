@@ -11,7 +11,7 @@ body {
     justify-content: center;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(27deg, #5448c8 50%,#7776bc 50%);
+    background: linear-gradient(27deg, #5448c8 50%, #7776bc 50%);
 }
 
 .form-body {
@@ -83,12 +83,26 @@ body {
     cursor: pointer;
     outline: none;
     border: 2px solid #390099;
-    transition:  all .5s ease;
-    
+    transition: all .5s ease;
 }
 
 .form-body button:hover {
     color: #d5dbdd;
     border: 2px solid #390099;
-    background:linear-gradient(#5f5aa2,#5f5aa2);
+    background: linear-gradient(#5f5aa2, #5f5aa2);
+}
+
+.prueba {
+    border-radius: 2px !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+
+.alerta {
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    text-align: center !important;
+    width: 300px !important;
 }
