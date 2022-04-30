@@ -32,8 +32,11 @@
             <input type="text" id="second-last-name" placeholder="Ej: Contreras" class="input input-second-last-name" [(ngModel)]="users.secondLastName" [ngModelOptions]="{standalone:true}" required>
             <br>
             <label for="phone" class="label">Telefono</label>
+            <br>
             <input type="text" id="phone" placeholder="Ej: 62538468" class="input input-phone" [(ngModel)]="users.phone" [ngModelOptions]="{standalone:true}" required>
+            <br>
             <label for="password" class="label">Password</label>
+            <br>
             <input type="password" id="password" placeholder="Ej: ********" class="input input-password" [(ngModel)]="users.password" [ngModelOptions]="{standalone:true}" required>
           <input type="submit" value="Create" class="primary-button login-button">
         </form>
