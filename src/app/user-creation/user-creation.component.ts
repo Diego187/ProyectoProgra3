@@ -35,7 +35,7 @@ export class UserCreationComponent implements OnInit {
       })
     }
     return this.http.post<any>("http://localhost:4042/user/add", this.users, httpOptions).pipe(
-      catchError(e=>e)
+      catchError(e=>"e")
     )
   }
 
@@ -45,8 +45,10 @@ export class UserCreationComponent implements OnInit {
       console.log("Error peticion");
     }else{
     this.users = {};
-    alert("El usuario fue creado exitosamente con id"+res.iduser)
-    }
+    alert("Bienvenido! su nuevo usuario es: "+res.user)
+      localStorage.setItem("user", JSON.stringify(res))
+    location.href=""
+  }
   }
 } 
   
