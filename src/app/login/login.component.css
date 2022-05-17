@@ -61,7 +61,7 @@ body {
 
 ::placeholder {
     font-size: 1rem;
-    color: rgba(255, 255, 255, .596);
+    color: rgb(255, 255, 255);
 }
 
 .form-body input:hover {
@@ -78,7 +78,7 @@ body {
     height: 40px;
     width: 78%;
     background: transparent;
-    color: #b9c4c6;
+    color: #ffffff;
     border-radius: 2px;
     cursor: pointer;
     outline: none;
@@ -88,7 +88,7 @@ body {
 }
 
 .form-body button:hover {
-    color: #d5dbdd;
+    color: #ffffff;
     border: 2px solid #390099;
     background:linear-gradient(#5f5aa2,#5f5aa2);
 }
