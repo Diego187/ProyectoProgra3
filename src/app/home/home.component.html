@@ -23,7 +23,7 @@
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
             </button>
-                    <a class="navbar-brand" style="color: white;" href="/user-creation">Moficacion de pefil</a>
+                    <a class="navbar-brand" style="color: white;" href="/user-edition">Moficacion de pefil</a>
                     <a class="navbar-brand" style="color: white;" href="#">Cerrar sesion</a>
                 </div>
             </div>
@@ -32,24 +32,17 @@
     <main>
         <section class="main-container">
             <div class="cards-container">
-                <div class="product-card">
-                    <button class="botoncanal">
-            </button>
+                <div class="product-card" *ngFor="let chat of chats">
+                    <button class="botoncanal" (click)="getChat(chat.name)"></button>
                     <div class="product-info">
-                        <div>
-                            <p class="tex">Canal</p>
-                            <p class="tex">Descripcion</p>
-                        </div>
-
+                        <p class="tex">{{chat.name}}</p>
+                        <p class="tex">{{chat.description}}</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <button class="botonagregar">
-            </button>
+                    <button class="botonagregar"></button>
                     <div class="product-info">
-                        <div>
-                            <p class="tex">Agregar canal</p>
-                        </div>
+                        <p class="tex">Agregar canal</p>
                     </div>
                 </div>
             </div>

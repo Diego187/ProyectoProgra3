@@ -15,15 +15,18 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" style="color: white;" href="">Log In</a>
+                <a class="navbar-brand" style="color: white;" href="/home">Inicio</a>
+                <a class="navbar-brand" style="color: white;" href="#">Cerrar sesion</a>
             </div>
         </div>
     </nav>
 </header>
 <body>
+    
+    <main>
     <div class="login">
         <div class="form-container">
-            <h1 class="title">My account</h1>
+            <h1 class="title">Edit My Account</h1>
 
             <form action="/" (ngSubmit)="createAccount()" id="form">
                 <div>
@@ -47,10 +50,11 @@
                 </div>
 
 
-                <input type="submit" value="Create" class="primary-button login-button">
+                <input type="submit" value="Edit" class="primary-button login-button">
             </form>
         </div>
     </div>
+</main>
 </body>
 
 </html>
