@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import {catchError} from 'rxjs/operators';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +11,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   user:any={};
   nameUser = ""
+  chats:any = {}
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.user = localStorage.getItem("user");
@@ -19,6 +23,40 @@ export class HomeComponent implements OnInit {
     console.log(this.user)
     console.log(this.user[0].user);
     
+
+    this.findChats().subscribe(
+      (respuesta:any) => this.formatChat(respuesta)
+    )
+    
+  }
+
+  getChat(name:any){
+    console.log(name)
+    for(let chat of this.chats){
+      if(chat.name == name){
+        localStorage.setItem("chat",JSON.stringify(chat))
+        location.href="/chat"
+      }
+    }
+    
+  }
+
+
+  formatChat(res:any){
+    this.chats = JSON.stringify(res)
+    this.chats = JSON.parse(this.chats)
+    console.log(this.chats)
+  }
+
+  findChats(){
+    var httpOptions={
+      headers:new HttpHeaders({
+        'Content-Type':'application/json'
+      })
+    }
+    return this.http.get<any>("http://localhost:4042/chat/find", httpOptions).pipe(
+      catchError(e=>"E")
+    )
   }
 
 }
