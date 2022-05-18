@@ -3,7 +3,12 @@ body {
     align-items: center;
     justify-content: center;
     height: 900px;
-    background: linear-gradient(27deg, #5448c8 50%, #7776bc 50%);
+    background: linear-gradient(232deg, #393373, #9190d4);
+    background-size: 400% 400%;
+
+    -webkit-animation: bgAnimateBitcoin 5s ease infinite;
+    -moz-animation: bgAnimateBitcoin 5s ease infinite;
+    animation: bgAnimateBitcoin 5s ease infinite;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
 }
@@ -94,4 +99,19 @@ nav{
         height: 100%;
         justify-content: space-between;
     }
+}
+@-webkit-keyframes bgAnimateBitcoin {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes bgAnimateBitcoin {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes bgAnimateBitcoin {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
