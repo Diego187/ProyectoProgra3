@@ -13,16 +13,25 @@
         </nav>
     </header>
     <div class="container">
-        <div class="chati">
+        <div class="">
             <div class="col-sm-12">
                 {{chat.name}}
             </div>
             <br>
             <br>
             <div class="row" *ngFor="let message of messages">
-                <h6>{{message.userUser}}, {{message.date}}, {{message.time}}</h6><br>
-                <p>{{message.message}}</p>
-                <br>
+                <div *ngIf="nameUser == message.userUser; else offUser">
+                    <div class="mySMS">
+                        <h6>{{message.userUser}}, {{message.date}}, {{message.time}}</h6><br>
+                        <p>{{message.message}}</p>
+                    </div>
+                </div>
+                <ng-template #offUser>
+                    <div class="SMS">
+                        <h6>{{message.userUser}}, {{message.date}}, {{message.time}}</h6><br>
+                        <p>{{message.message}}</p>
+                    </div>
+                </ng-template>
             </div>
         </div>
         <div>
