@@ -19,28 +19,29 @@ export class LoginComponent implements OnInit {
   mostrar: boolean =false;
   user: any= {};
   usuarioInvalido: boolean=false;
-
-
+  
+  
  constructor(private http: HttpClient) { }
-
+    
   ngOnInit(): void {
+    localStorage.clear()
   }
 
  mostrarMensaje(){
     this.mostrar = !this.mostrar;
-  }
+  }  
 
     formulariologin(){
-
+      
       let formularioValido : any = document.getElementById("loginForm");
       if(formularioValido.reportValidity()){
-
+        
         this.servicioLogin().subscribe(
           (respuesta:any)=> this.login(respuesta)
         )
       }
     }
-
+  
     login(res:any){
     console.log(res)
       if(res.length == 0){
@@ -53,24 +54,26 @@ export class LoginComponent implements OnInit {
       else if(res!=null){
         localStorage.setItem("user",JSON.stringify(res));
         console.log("pasa por diferente de null")
-        location.href="/home";
-      }
+        location.href="/home"; 
+      } 
     }
+
 
     crearUsuario(){
-      location.href="/user-creation";
+      location.href="/user-creation"; 
     }
-
+  
     servicioLogin(){
       var httpOptions={
-        headers:new HttpHeaders({
+        headers:new HttpHeaders({ 
           'Content-Type':'application/json'
         })
       }
-
+  
       return this.http.post<any>("http://localhost:4042/login/user", this.user, httpOptions).pipe(
         catchError(e=>"e")
       )
+  
     }
 
     createuser(user:any){
