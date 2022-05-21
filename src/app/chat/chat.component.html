@@ -6,14 +6,14 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             </button>
-                    <a class="navbar-brand" style="color: white;" href="/user-creation">Moficacion de pefil</a>
+                    <a class="navbar-brand" style="color: white;" href="/home">Inicio</a>
                     <a class="navbar-brand" style="color: white;" (click)="signOff()">Cerrar sesion</a>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
-        <div class="row">
+        <div class="chati">
             <div class="col-sm-12">
                 {{chat.name}}
             </div>
@@ -22,10 +22,11 @@
             <div class="row" *ngFor="let message of messages">
                 <h6>{{message.userUser}}, {{message.date}}, {{message.time}}</h6><br>
                 <p>{{message.message}}</p>
-                <br><br>
+                <br>
             </div>
         </div>
-        <div class="row">
+        <div>
+
             <footer>
                 <input [(ngModel)]="SMS" type="text">
                 <button (click)="sendSMS()">Enviar</button>
