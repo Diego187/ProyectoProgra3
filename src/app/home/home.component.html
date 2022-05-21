@@ -33,7 +33,7 @@
         <section class="main-container">
             <div class="cards-container">
                 <div class="product-card" *ngFor="let chat of chats">
-                    <button class="botoncanal" (click)="getChat(chat.name)"></button>
+                    <button class="botoncanal" (click)="getChat(chat.channelIdchannel)"></button>
                     <div class="product-info">
                         <p class="tex">{{chat.name}}</p>
                         <p class="tex">{{chat.description}}</p>
@@ -48,6 +48,11 @@
             </div>
         </section>
     </main>
+
+
+
+
+
     <footer></footer>
 </body>
 

@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
  constructor(private http: HttpClient) { }
     
   ngOnInit(): void {
+    localStorage.clear()
   }
 
  mostrarMensaje(){
@@ -54,10 +55,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("user",JSON.stringify(res));
         console.log("pasa por diferente de null")
         location.href="/home"; 
-      }
- 
-  
-  
+      } 
     }
 
 
