@@ -117,8 +117,12 @@ body {
         height: 140px;
     }
 }
+<<<<<<< HEAD
 
 .chat-row {
+=======
+  .chat-row {
+>>>>>>> frontcris
     width: 100%;
     float: left;
     margin-bottom: 8px;
@@ -147,6 +151,7 @@ body {
     background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
 }
 
+<<<<<<< HEAD
 .mySMS {
     color: white !important;
     margin: 10px;
@@ -158,3 +163,29 @@ body {
     text-align: right;
     background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
 }
+=======
+  .jeje{
+      color: #26ccff !important;
+  }
+
+.prueba {
+  border-radius: 2px !important;
+  border-top-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+.form-body button {
+  display: inline-block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  height: 40px;
+  width: 25%;
+  background: transparent;
+  color: #b9c4c6;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #390099;
+  transition: all .5s ease;
+}
+>>>>>>> frontcris

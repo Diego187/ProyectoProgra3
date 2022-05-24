@@ -4,10 +4,8 @@
             <div class="container-fluid">
                 <h3 class="usuario" id="user">{{nameUser}}</h3>
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            </button>
-                    <a class="navbar-brand" style="color: white;" href="/home">Inicio</a>
-                    <a class="navbar-brand" style="color: white;" (click)="signOff()">Cerrar sesion</a>
+                    <a class="navbar-brand" style="color: white;" href="/home">Regresar</a>
+                    <a class="navbar-brand" style="color: white;" (click)="signOff()">Cerrar Sesión</a>
                 </div>
             </div>
         </nav>
@@ -34,11 +32,12 @@
                 </ng-template>
             </div>
         </div>
-        <div>
+        <div class="form-body">
 
             <footer>
-                <input [(ngModel)]="SMS" type="text">
-                <button (click)="sendSMS()">Enviar</button>
+                <input [(ngModel)]="SMS" type="text" class="prueba">
+              <button (click)="sendSMS()" class="prueba">Enviar</button>
+
             </footer>
 
         </div>
