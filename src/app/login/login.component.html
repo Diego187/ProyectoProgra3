@@ -14,9 +14,9 @@
         <img src="https://www.tuexperto.com/wp-content/uploads/2017/02/giphy-2.gif">
         <p class="text">¡Bienvenido!</p>
         <form class="login-form" (ngSubmit)="formulariologin()" id="loginForm">
-            <input  style="text-transform:uppercase;" placeholder="Usuario" class="text" [(ngModel)]="user.user" [ngModelOptions]="{standalone: true}" required>
-            <div >
-                <input  type="password" placeholder="CONTRASEÑA" class="text" [(ngModel)]="user.pass" [ngModelOptions]="{standalone: true}" required>
+            <input style="text-transform:uppercase;" placeholder="Usuario" class="text" [(ngModel)]="user.user" [ngModelOptions]="{standalone: true}" required>
+            <div>
+                <input type="password" placeholder="CONTRASEÑA" class="text" [(ngModel)]="user.pass" [ngModelOptions]="{standalone: true}" required>
             </div>
             <button type="submit" class="prueba">Iniciar Sesión</button>
         </form>
