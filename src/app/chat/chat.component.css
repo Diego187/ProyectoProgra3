@@ -116,13 +116,15 @@ body {
         width: 140px;
         height: 140px;
     }
-} 
-  .chat-row {
+}
+
+.chat-row {
     width: 100%;
     float: left;
     margin-bottom: 8px;
-  }
-.chati{
+}
+
+.chati {
     color: white !important;
     margin: 0;
     padding: 8px;
@@ -130,18 +132,29 @@ body {
     height: 40px;
     margin-left: 8px;
     border-radius: 8px;
-    background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%)); 
+    background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
 }
-  .row,.p {
+
+.SMS {
     color: white !important;
     margin: 10px;
     padding: 8px;
-    max-width: 60%;
+    max-width: 50%;
     margin-left: 8px;
     border-radius: 8px;
+    float: left;
+    text-align: left;
     background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
-  }
+}
 
-  .jeje{
-      color: #26ccff !important;
-  }
+.mySMS {
+    color: white !important;
+    margin: 10px;
+    padding: 8px;
+    max-width: 50%;
+    margin-left: 8px;
+    border-radius: 8px;
+    float: right;
+    text-align: right;
+    background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
+}
