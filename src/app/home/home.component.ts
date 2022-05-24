@@ -12,7 +12,7 @@ import { HttpHeaders } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   user:any={};
   nameUser = ""
-  chats:any = {}
+  chats:any = []
   allChats:any = {}
   value = 0
 
