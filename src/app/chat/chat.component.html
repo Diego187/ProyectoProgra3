@@ -4,37 +4,40 @@
             <div class="container-fluid">
                 <h3 class="usuario" id="user">{{nameUser}}</h3>
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            </button>
-                    <a class="navbar-brand" style="color: white;" href="/user-creation">Moficacion de pefil</a>
-                    <a class="navbar-brand" style="color: white;" (click)="signOff()">Cerrar sesion</a>
+                    <a class="navbar-brand" style="color: white;" href="/home">Regresar</a>
+                    <a class="navbar-brand" style="color: white;" (click)="signOff()">Cerrar Sesión</a>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
-        <div class="row">
+        <div class="">
             <div class="col-sm-12">
                 {{chat.name}}
             </div>
             <br>
             <br>
             <div class="row" *ngFor="let message of messages">
-                <h6>{{message.user}}, {{message.date}}, {{message.time}}</h6><br>
-                <p>{{message.message}}</p>
-                <br><br>
+                <div *ngIf="nameUser == message.userUser; else offUser">
+                    <div class="mySMS">
+                        <h6>{{message.userUser}}, {{message.date}}, {{message.time}}</h6><br>
+                        <p>{{message.message}}</p>
+                    </div>
+                </div>
+                <ng-template #offUser>
+                    <div class="SMS">
+                        <h6>{{message.userUser}}, {{message.date}}, {{message.time}}</h6><br>
+                        <p>{{message.message}}</p>
+                    </div>
+                </ng-template>
             </div>
         </div>
-        <div class="row">
-            <footer>
-                <input [(ngModel)]="SMS" type="text">
-                <button (click)="sendSMS()">Enviar</button>
-            </footer>
-
-        </div>
-
+        <footer>
+            <div id="chat-footer">
+                <input [(ngModel)]="SMS" id="input-msg" class="input-msg" type="text" name="msg-content" placeholder="Escribe un mensaje" title="input message">
+                <button class="btn-sent" type="button" name="button" onclick="sendSMS();">&#8250;</button>
+              </div>
+        </footer>
     </div>
 
 </div>
-
-

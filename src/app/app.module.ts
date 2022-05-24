@@ -8,7 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserCreationComponent } from './user-creation/user-creation.component';
+import { UserEditionComponent } from './user-edition/user-edition.component';
 import { ChatComponent } from './chat/chat.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { ChatComponent } from './chat/chat.component';
     HomeComponent,
     LoginComponent,
     UserCreationComponent,
+    UserEditionComponent,
     ChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
