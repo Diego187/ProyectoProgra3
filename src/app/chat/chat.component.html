@@ -11,12 +11,12 @@
         </nav>
     </header>
     <div class="container">
-        <div class="">
-            <div class="col-sm-12">
-                {{chat.name}}
-            </div>
-            <br>
-            <br>
+        <div class="col-sm-12">
+            {{chat.name}}
+        </div>
+        <br>
+        <br>
+        <div class="box">
             <div class="row" *ngFor="let message of messages">
                 <div *ngIf="nameUser == message.userUser; else offUser">
                     <div class="mySMS">
@@ -33,15 +33,10 @@
             </div>
         </div>
         <div class="form-body">
-
             <footer>
                 <input [(ngModel)]="SMS" type="text" class="prueba">
-              <button (click)="sendSMS()" class="prueba">Enviar</button>
-
+                <button (click)="sendSMS()" class="prueba">Enviar</button>
             </footer>
-
         </div>
-
     </div>
-
 </div>

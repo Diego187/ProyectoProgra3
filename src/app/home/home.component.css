@@ -6,125 +6,159 @@
 5. Otros
 */
 
-nav{
-  background-color: #0d0085;
-  border: none;
+nav {
+    background-color: #0d0085;
+    border: none;
 }
-.tex{
-  text-align: center;
-  color: white !important;
+
+.tex {
+    text-align: center;
+    color: white !important;
 }
-.botoncanal{
-  background-image: url(https://www.psicoactiva.com/wp-content/uploads/2013/06/informatica-psicologia-mente.jpg);
-  background-repeat:no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100px;
-  width: 100px;
-  border-radius:25px 25px 25px 25px;
-  border: none;
+
+.botoncanal {
+    background-image: url(https://www.psicoactiva.com/wp-content/uploads/2013/06/informatica-psicologia-mente.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
 }
-.botonagregar{
-  background-image: url(https://cdn-icons-png.flaticon.com/512/117/117885.png);
-  background-repeat:no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100px;
-  width: 100px;
-  border-radius:25px 25px 25px 25px;
-  border: none;
+
+.botonagregar {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/117/117885.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
 }
-.usuario{
-  float: left;
-  padding-right: 700px;
-  color: white;
+
+.usuario {
+    float: left;
+    padding-right: 700px;
+    color: white;
 }
-body { 
+
+body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     background: linear-gradient(232deg, #393373, #9190d4);
-
     -webkit-animation: bgAnimateBitcoin 5s ease infinite;
     -moz-animation: bgAnimateBitcoin 5s ease infinite;
     animation: bgAnimateBitcoin 5s ease infinite;
     background-size: 400% 400%;
-    height: 900px;
-  }
-  .cards-container {
+    height: 100vh;
+}
+
+.cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);
     gap: 26px;
     place-content: center;
-  }
-  .product-card {
+}
+
+.product-card {
     width: 240px;
     text-align: center;
-  }
-  .product-card img {
+}
+
+.product-card img {
     width: 240px;
     height: 240px;
     border-radius: 20px;
     object-fit: cover;
-  }
-  .product-info {
+}
+
+.product-info {
     align-items: center;
-  }
-  .product-info figure {
+}
+
+.product-info figure {
     margin: 0;
-  }
-  .product-info figure img {
+}
+
+.product-info figure img {
     width: 35px;
     height: 35px;
-  }
-  .product-info div p:nth-child(1) {
+}
+
+.product-info div p:nth-child(1) {
     font-weight: bold;
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 4px;
-  }
-  .product-info div p:nth-child(2) {
+}
+
+.product-info div p:nth-child(2) {
     font-size: var(--sm);
     margin-top: 0;
     margin-bottom: 0;
     color: var(--very-light-pink);
-  }
-  .product-card figure {
+}
+
+.product-card figure {
     width: 40px;
     height: 40px;
     border-radius: 20px;
     object-fit: cover;
-  }
-  @media (max-width: 640px) {
+}
+
+@media (max-width: 640px) {
     .cards-container {
-      grid-template-columns: repeat(auto-fill, 140px);
+        grid-template-columns: repeat(auto-fill, 140px);
     }
     .product-card {
-      width: 140px;
+        width: 140px;
     }
     .product-card img {
-      width: 140px;
-      height: 140px;
+        width: 140px;
+        height: 140px;
     }
-  }
+}
 
 @-webkit-keyframes bgAnimateBitcoin {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @-moz-keyframes bgAnimateBitcoin {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @keyframes bgAnimateBitcoin {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }

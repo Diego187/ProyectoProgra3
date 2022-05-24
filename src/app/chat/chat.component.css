@@ -5,7 +5,7 @@
     }
     
     input {
-        width: 1300px;
+        width: 75%;
     }
     /*
 1. Posicionamiento
@@ -15,7 +15,7 @@
 5. Otros
 */
     
-    :root {
+     :root {
         --white: #FFFFFF;
         --black: #000000;
         --very-light-pink: #C7C7C7;
@@ -47,7 +47,6 @@
         margin: 0;
         font-family: 'Quicksand', sans-serif;
         background: linear-gradient(27deg, #5448c8 50%, #7776bc 50%);
-        height: 875px;
     }
     
     .cards-container {
@@ -122,17 +121,6 @@
         margin-bottom: 8px;
     }
     
-    .chati {
-        color: white !important;
-        margin: 0;
-        padding: 8px;
-        max-width: 60%;
-        height: 40px;
-        margin-left: 8px;
-        border-radius: 8px;
-        background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
-    }
-    
     .SMS {
         color: white !important;
         margin: 10px;
@@ -173,7 +161,7 @@
         margin-top: 25px;
         margin-bottom: 30px;
         height: 40px;
-        width: 25%;
+        width: 100%;
         background: transparent;
         color: #b9c4c6;
         border-radius: 2px;
@@ -181,4 +169,11 @@
         outline: none;
         border: 2px solid #390099;
         transition: all .5s ease;
+    }
+    
+    .box {
+        overflow: auto;
+        overflow-x: hidden;
+        max-width: 100%;
+        max-height: 670px;
     }
