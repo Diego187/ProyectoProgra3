@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
 
   /*remove(){
     console.log("REMOVE")
-    console.log(this.allChats)    
+    console.log(this.allChats)
   }*/
 
   getChat(idChannel:any){
