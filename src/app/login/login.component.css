@@ -28,6 +28,7 @@ body {
     border-bottom-right-radius: 50px;
     border: solid 5px #000100;
     margin: 10px;
+
 }
 
 .form-body img {
@@ -36,13 +37,7 @@ body {
     margin: 20px auto;
 }
 
-.text {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 25px;
-}
+
 
 .form-body input {
     display: block;
@@ -73,7 +68,7 @@ body {
 .form-body input:hover {
     transition: .5s;
     border: 1px solid #390099;
-    color: #2498db;
+    color: #393373;
 }
 
 .form-body button {
@@ -127,4 +122,11 @@ body {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+.text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 25px;
 }
