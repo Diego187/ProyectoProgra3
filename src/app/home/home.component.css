@@ -48,6 +48,140 @@ nav {
     float: left;
     padding-right: 700px;
     color: white;
+    background-color: #0d0085;
+    border: none;
+}
+
+.tex {
+    text-align: center;
+    color: white !important;
+}
+
+.botoncanal {
+    background-image: url(https://www.psicoactiva.com/wp-content/uploads/2013/06/informatica-psicologia-mente.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+}
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: start;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-modal:checked~.modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+    transition: all 500ms ease;
+    position: relative;
+    transform: translateY(-30%);
+}
+
+#btn-modal:checked~.modal .contenedor {
+    transform: translateY(0%);
+}
+
+.contenedor header {
+    padding: 10px;
+    background: #5448c8;
+    color: #fff;
+}
+
+.contenedor label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.contenido {
+    width: 100%;
+    padding: 10px;
+}
+
+.contenido h3 {
+    margin-bottom: 10px;
+}
+
+.contenido p {
+    margin-bottom: 7px;
+}
+
+#btn-modal {
+    display: none;
+}
+
+.lbl-modal {
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/117/117885.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    .contenedor {
+        width: 100%;
+    }
+}
+
+
+/* .botonagregar {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/117/117885.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 25px 25px 25px 25px;
+  border: none;
+} */
+
+.usuario {
+    float: left;
+    padding-right: 700px;
+    color: white;
 }
 
 body {
@@ -78,6 +212,23 @@ body {
     height: 240px;
     border-radius: 20px;
     object-fit: cover;
+}
+
+.product-info {
+    height: 900px;
+}
+
+.cards-container {
+    grid-template-columns: repeat(auto-fill, 140px);
+}
+
+.product-card {
+    width: 140px;
+}
+
+.product-card img {
+    width: 140px;
+    height: 140px;
 }
 
 .product-info {

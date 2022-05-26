@@ -32,11 +32,11 @@
                 </ng-template>
             </div>
         </div>
-        <div class="form-body">
-            <footer>
-                <input [(ngModel)]="SMS" type="text" class="prueba">
-                <button (click)="sendSMS()" class="prueba">Enviar</button>
-            </footer>
-        </div>
+        <footer>
+            <div id="chat-footer">
+                <input [(ngModel)]="SMS" id="input-msg" class="input-msg" type="text" name="msg-content" placeholder="Escribe un mensaje" title="input message">
+                <button class="btn-sent" type="button" name="button" onclick="sendSMS();">&#8250;</button>
+            </div>
+        </footer>
     </div>
 </div>
