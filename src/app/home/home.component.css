@@ -16,27 +16,32 @@ html{
   font-family: 'DM Sans',sans-serif;
 }
 nav {
-  background-color: #0d0085;
+  background: linear-gradient(232deg, #393373, #9190d4);
+
   border: none;
+  -webkit-animation: bgAnimateBitcoin 5s ease infinite;
+    -moz-animation: bgAnimateBitcoin 5s ease infinite;
+    animation: bgAnimateBitcoin 5s ease infinite;
+    display: flex;
 }
 
-.tex {
+.text {
   text-align: center;
-  color: white !important;
+  color: black !important;
 }
 
 .botoncanal {
-  background-image: url(https://www.psicoactiva.com/wp-content/uploads/2013/06/informatica-psicologia-mente.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100px;
-  width: 100px;
-  border-radius: 25px 25px 25px 25px;
-  border: none;
+  position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    bottom: 30px;
+    left: calc(50% - 60px);
+    font-size: 1.2rem;
+    background-color: #9190d4;
+    border-radius: 8px;
+    color: #fff;
+    border-style: none;
 }
 
 
@@ -100,7 +105,7 @@ nav {
 }
 
 .lbl-modal{
-
+  margin: 20px 10px 20px 10px;
 	padding: 10px 15px;
 	border-radius: 4px;
 	cursor: pointer;
@@ -171,10 +176,10 @@ body {
   }
   .product-card {
     position: relative;
-    width: 70%;
+    width: 60%;
     min-width: 190px;
     max-width: 300px;
-    height: 250px;
+    height: 200px;
     margin: 50px 5px 0;
     padding: 0 15px;
     background: white;
@@ -197,6 +202,8 @@ body {
     height: 35px;
   }
   .product-card--title{
+    margin-top: 30px;
+    margin-bottom: 10px;
     padding: 5px 0;
     font-size: 3.2rem;
     font-weight: bold;
@@ -220,12 +227,11 @@ body {
     color: var(--very-light-pink);
   } */
   .product-card figure {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border-radius: 20px;
     object-fit: cover;
   }
-
 
 @-webkit-keyframes bgAnimateBitcoin {
     0%{background-position:0% 50%}
