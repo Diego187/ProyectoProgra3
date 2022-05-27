@@ -6,6 +6,15 @@
 5. Otros
 */
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%;
+  font-family: 'DM Sans',sans-serif;
+}
 nav {
   background-color: #0d0085;
   border: none;
@@ -137,7 +146,7 @@ nav {
 body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(232deg, #393373, #9190d4);
+    background: faf8f7;
 
     -webkit-animation: bgAnimateBitcoin 5s ease infinite;
     -moz-animation: bgAnimateBitcoin 5s ease infinite;
@@ -149,11 +158,28 @@ body {
   .cards-container {
     /*grid-template-columns: repeat(auto-fill, 140px);*/
     display: flex;
+    gap: 50px;
+    height: 316px;
     justify-content: center;
   }
 
+  .main-container{
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+  }
   .product-card {
-    width: 140px;
+    position: relative;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 5px 0;
+    padding: 0 15px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16); 
   }
 
   .product-card img {
@@ -163,14 +189,25 @@ body {
   .product-info {
     align-items: center;
   }
-  .product-info figure {
+  /* .product-info figure {
     margin: 0;
-  }
+  } */
   .product-info figure img {
     width: 35px;
     height: 35px;
   }
-  .product-info div p:nth-child(1) {
+  .product-card--title{
+    padding: 5px 0;
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 3.3rem;
+    color: black;
+  }
+  .product-card--description{
+    font-size: 1.2rem;
+    color: #757575;
+  }
+  /* .product-info div p:nth-child(1) {
     font-weight: bold;
     font-size: var(--md);
     margin-top: 0;
@@ -181,25 +218,14 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     color: var(--very-light-pink);
-  }
+  } */
   .product-card figure {
     width: 40px;
     height: 40px;
     border-radius: 20px;
     object-fit: cover;
   }
-  @media (max-width: 640px) {
-    .cards-container {
-      grid-template-columns: repeat(auto-fill, 140px);
-    }
-    .product-card {
-      width: 140px;
-    }
-    .product-card img {
-      width: 140px;
-      height: 140px;
-    }
-  }
+
 
 @-webkit-keyframes bgAnimateBitcoin {
     0%{background-position:0% 50%}
