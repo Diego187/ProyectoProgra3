@@ -2,7 +2,7 @@
     <header>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <h3 class="usuario" id="user">{{nameUser}}</h3>
+                <h3 class="usuario" id="user">{{chat[0].name}}</h3>
                 <div class="navbar-header">
                     <a class="navbar-brand" style="color: white;" href="/home">Regresar</a>
                     <a class="navbar-brand" style="color: white;" (click)="signOff()">Cerrar Sesión</a>
@@ -11,22 +11,26 @@
         </nav>
     </header>
     <div class="container">
-        <div class="">
-            <div class="col-sm-12">
-                {{chat.name}}
-            </div>
-            <br>
+        <div>
             <br>
             <div class="row" *ngFor="let message of messages">
-                <div *ngIf="nameUser == message.userUser; else offUser">
-                    <div class="mySMS">
-                        <h6>{{message.userUser}}, {{message.date}}, {{message.time}}</h6><br>
-                        <p>{{message.message}}</p>
+                <div *ngIf="userBot == message.userUser; else BOT">
+                    <div class="botSMS">
+                        <b><h6>{{message.date}}</h6><br>
+                        <p>{{message.message}}</p></b>
                     </div>
                 </div>
+                <ng-template #BOT>
+                    <div *ngIf="nameUser == message.userUser; else offUser">
+                        <div class="mySMS">
+                            <h6>{{message.date}} {{message.time}}</h6>
+                            <p>{{message.message}}</p>
+                        </div>
+                    </div>
+                </ng-template>
                 <ng-template #offUser>
                     <div class="SMS">
-                        <h6>{{message.userUser}}, {{message.date}}, {{message.time}}</h6><br>
+                        <h6>{{message.userUser}}<br>{{message.date}} {{message.time}}</h6>
                         <p>{{message.message}}</p>
                     </div>
                 </ng-template>
@@ -35,8 +39,8 @@
         <footer>
             <div id="chat-footer">
                 <input [(ngModel)]="SMS" id="input-msg" class="input-msg" type="text" name="msg-content" placeholder="Escribe un mensaje" title="input message">
-                <button class="btn-sent" type="button" name="button" onclick="sendSMS();">&#8250;</button>
-              </div>
+                <button class="btn-sent" type="button" name="button" (click)="sendSMS()">&#8250;</button>
+            </div>
         </footer>
     </div>
 
