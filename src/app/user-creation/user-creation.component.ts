@@ -50,5 +50,4 @@ export class UserCreationComponent implements OnInit {
     location.href=""
   }
   }
-} 
-  
+}
