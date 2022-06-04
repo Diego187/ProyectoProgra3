@@ -16,8 +16,7 @@ html{
   font-family: 'DM Sans',sans-serif;
 }
 nav {
-  background: linear-gradient(232deg, #393373, #9190d4);
-
+  background: linear-gradient(232deg, #4d40ff, #a94eff);
   border: none;
   -webkit-animation: bgAnimateBitcoin 5s ease infinite;
     -moz-animation: bgAnimateBitcoin 5s ease infinite;
