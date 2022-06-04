@@ -1,44 +1,45 @@
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {catchError} from 'rxjs/operators';
-import { HttpHeaders } from '@angular/common/http';
 import {BehaviorSubject, Observable, Subject} from 'rxjs';
-
+import { ajax } from 'rxjs/ajax';
+import {catchError} from "rxjs/operators";
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css']
+  selector: 'app-pruebas',
+  templateUrl: './pruebas.component.html',
+  styleUrls: ['./pruebas.component.css']
 })
-export class ChatComponent implements OnInit {
-  user:any={};
+export class PruebasComponent implements OnInit {
+  idchannel:number =0
+  messages:any = {}
   chat : any = {}
+  subject = new Subject<any>()
   SMS:any
   SMS2:any
   newSMS:any={}
-  messages:any = {}
-  subject = new Subject<any>()
   nameUser = 'DIBOY1'
   nameUser2 = 'CCACERES2'
 
-  constructor(private http:HttpClient) { }
+
+  constructor(private http:HttpClient){}
+
 
   ngOnInit(): void {
-    this.cargarChats();
+
+  this.cargar()
+
   }
 
-  cargarChats(){
-    this.user = localStorage.getItem("user");
-    this.user = JSON.parse(this.user);
-    this.nameUser = this.user[0].user;
-
+  cargar(){
     this.chat = localStorage.getItem("chat")
     this.chat = JSON.parse(this.chat)
 
     console.log(this.chat)
     console.log("MENSAJES")
+    this.idchannel = this.chat.idchannel
     this.messages = this.chat[0].messageList
     console.log(this.messages)
+
 
     this.subject.subscribe(data =>{
       console.log('recibiendo: ' + JSON.stringify(data))
@@ -120,8 +121,5 @@ export class ChatComponent implements OnInit {
     }
   }
 
-  signOff(){
-    localStorage.clear()
-    location.href="#"
-  }
+
 }
