@@ -15,18 +15,18 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" style="color: white;" href="/home">Inicio</a>
-                <a class="navbar-brand" style="color: white;" href="#">Cerrar sesion</a>
+                <a class="navbar-brand" style="color: white;" href="/home">Regresar</a>
+                <a class="navbar-brand" style="color: white;" href="#">Cerrar Sesión</a>
             </div>
         </div>
     </nav>
 </header>
 <body>
-    
+
     <main>
     <div class="login">
         <div class="form-container">
-            <h1 class="title">Edit My Account</h1>
+            <h1 class="title">Editar Mi Cuenta</h1>
 
             <form action="/" (ngSubmit)="createAccount()" id="form">
                 <div>
@@ -42,15 +42,13 @@
                     <label for="second-last-name" class="label">Segundo Apellido</label>
                     <input type="text" id="second-last-name" placeholder="Ej: Corzo" class="input input-second-last-name" [(ngModel)]="users.secondLastName" [ngModelOptions]="{standalone:true}" required>
 
-                    <label for="phone" class="label">Telefono</label>
+                    <label for="phone" class="label">Teléfono</label>
                     <input type="text" id="phone" placeholder="Ej: 62538468" class="input input-phone" [(ngModel)]="users.telephone" [ngModelOptions]="{standalone:true}" required>
 
-                    <label for="password" class="label">Password</label>
+                    <label for="password" class="label">Contraseña</label>
                     <input type="password" id="password" placeholder="Ej: ********" class="input input-password" [(ngModel)]="users.password" [ngModelOptions]="{standalone:true}" required>
                 </div>
-
-
-                <input type="submit" value="Edit" class="primary-button login-button">
+                <input type="submit" value="Editar" class="primary-button login-button">
             </form>
         </div>
     </div>

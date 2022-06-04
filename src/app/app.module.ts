@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserCreationComponent } from './user-creation/user-creation.component';
 import { UserEditionComponent } from './user-edition/user-edition.component';
 import { ChatComponent } from './chat/chat.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { PruebasComponent } from './pruebas/pruebas.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { ChatComponent } from './chat/chat.component';
     LoginComponent,
     UserCreationComponent,
     UserEditionComponent,
-    ChatComponent
+    ChatComponent,
+    PruebasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
