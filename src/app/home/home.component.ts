@@ -46,6 +46,7 @@ export class HomeComponent implements OnInit {
     var httpOptions={
       headers:new HttpHeaders({
         'Content-Type':'application/json'
+
       })
     }
     return this.http.get<any>("http://localhost:4042/chat/findOne/" + idChannel, httpOptions).pipe(
@@ -55,9 +56,9 @@ export class HomeComponent implements OnInit {
 
   formatChatOne(res:any){
     localStorage.setItem("chat",JSON.stringify(res))
-    location.href="/chat"
+    location.href="/pruebas"
   }
-  
+
   formatChat(res:any){
     this.chats = JSON.stringify(res)
     this.chats = JSON.parse(this.chats)
@@ -84,17 +85,17 @@ export class HomeComponent implements OnInit {
       )
     }
   }
-  
+
   createService(){
     var httpOptions={
       headers:new HttpHeaders({
         'Content-Type':'application/json'
       })
     }
-  
+
   let prueba = {"name":this.channel.name, "description":this.channel.description, "user":this.user[0].user, "userIdclient":this.user[0].idclient}
     console.log(prueba)
-   
+
   console.log(prueba)
     return this.http.post<any>("http://localhost:4042/chat/add", prueba, httpOptions).pipe(
        catchError(e=>"e")
@@ -109,7 +110,7 @@ export class HomeComponent implements OnInit {
     this.channel = {};
     alert("Su canal a sido agregado: "+res.name)
       localStorage.setItem("chat", JSON.stringify(res))
-    location.href="/home"
-  }
+      location.href="/home"
+    }
   }
 }
