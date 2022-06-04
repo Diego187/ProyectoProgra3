@@ -1,10 +1,9 @@
 footer {
     position: fixed;
     bottom: 0;
-    z-index: 999999;
-    width: 39%;
+    display: flex;
+    width: 40%;
 }
-
 
 
 
@@ -85,6 +84,13 @@ body {
     object-fit: cover;
 }
 
+.border{
+  height: 625px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  overflow-y: scroll;
+  
+}
 .chat-row {
     width: 100%;
     float: left;
@@ -103,15 +109,16 @@ body {
 }
 
 .SMS {
-    color: fuchsia !important;
+    color: black !important;
     margin: 10px;
-    padding: 8px;
-    max-width: 50%;
+    padding: 0.5rem;
+    max-width: 75%;
     margin-left: 8px;
-    border-radius: 15px;
+    line-height: 1.25;
+    border-radius: 1.15rem;
     float: left;
     text-align: left;
-    background-image: linear-gradient( to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
+    background-color: #e8e8e8;
 }
 
 .mySMS {
@@ -130,6 +137,9 @@ body {
 .mySMS h6 {
     font-size: 0.7rem;
 }
+.SMS h6{
+  font-size: 0.7rem;
+}
 
 .recuadro {
     color: #26ccff !important;
@@ -142,20 +152,22 @@ body {
     padding: 6px;
     position: center;
     background-color: hsl(206, 6%, 79%);
-    ;
     border-radius: 3rem;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 .input-msg {
     width: 100%;
     border-radius: 3rem;
-    border: none;
     font-size: 1em;
     padding: 10px 35px 8px 20px;
     height: 100%;
     outline: none;
     line-height: 1;
+    margin-bottom: 15px;
+    border-color: hsl(206, 6%, 79%);
+    display: flex;
+    justify-content: center;
 }
 
 .input-msg::placeholder {
