@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="chat.component.css">
 <div>
     <header>
         <nav class="navbar navbar-default">
@@ -16,7 +17,7 @@
             <div class="row" *ngFor="let message of messages">
                 <div *ngIf="userBot == message.userUser; else BOT">
                     <div class="botSMS">
-                        <b><h6>{{message.date}}</h6><br>
+                        <b><h6>{{message.date}}</h6>
                         <p>{{message.message}}</p></b>
                     </div>
                 </div>

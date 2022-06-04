@@ -21,7 +21,7 @@ export class ChatComponent implements OnInit {
   userBot = "BOT"
 
   messages:any = {}
-  
+
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -40,7 +40,7 @@ export class ChatComponent implements OnInit {
     console.log("MENSAJES")
     this.messages = this.chat[0].messageList
     console.log(this.messages)
-    
+
   }
 
   sendSMS(){
@@ -48,16 +48,15 @@ export class ChatComponent implements OnInit {
     var month = date.getMonth() + 1
 
     //var prueba2 = {name:this.channel.name, description:this.channel.description, user:this.user[0].user, userIdclient:this.user[0].idclient}
-    
+
 
     if(this.SMS == "" || this.SMS == " "){
-      
+
     }
     else{
       this.newSMS = {date: date.getDate()+"/"+month+"/"+date.getFullYear(), time: date.getHours()+":"+date.getMinutes(), userUser: this.nameUser, message: this.SMS,
       channelIdchannel:this.chat[0].idchannel, userIdclient:this.user[0].idclient}
       this.messages.push(this.newSMS)
-
 
 
       console.log(this.newSMS)

@@ -3,7 +3,7 @@
         bottom: 0;
         z-index: 999999;
     }
-    
+
     input {
         width: 1300px;
     }
@@ -14,7 +14,7 @@
 4. Visuales
 5. Otros
 */
-    
+
      :root {
         --white: #FFFFFF;
         --black: #000000;
@@ -26,55 +26,55 @@
         --md: 16px;
         --lg: 18px;
     }
-    
+
     nav {
         background-color: #0d0085;
         border: none;
     }
-    
+
     .tex {
         text-align: center;
         color: white !important;
     }
-    
+
     .usuario {
         float: left;
         padding-right: 700px;
         color: white;
     }
-    
+
     body {
         margin: 0;
         font-family: 'Quicksand', sans-serif;
         background: linear-gradient(27deg, #5448c8 50%, #7776bc 50%);
         height: 875px;
     }
-    
+
     .cards-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, 240px);
         gap: 26px;
         place-content: center;
     }
-    
+
     .product-card {
         width: 240px;
         text-align: center;
     }
-    
+
     .product-card img {
         width: 240px;
         height: 240px;
         border-radius: 20px;
         object-fit: cover;
     }
-    
+
     .chat-row {
         width: 100%;
         float: left;
         margin-bottom: 8px;
     }
-    
+
     .chati {
         color: white !important;
         margin: 0;
@@ -85,7 +85,7 @@
         border-radius: 8px;
         background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
     }
-    
+
     .SMS {
         color: white !important;
         margin: 10px;
@@ -97,7 +97,7 @@
         text-align: left;
         background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
     }
-    
+
     .mySMS {
         color: white !important;
         margin: 10px;
@@ -107,17 +107,17 @@
         border-radius: 15px;
         float: right;
         text-align: right;
-        background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));
+        /*background-image: linear-gradient(to right, hsl(239, 41%, 42%), hsl(226, 100%, 50%));*/
     }
-    
+
     .recuadro {
         color: #26ccff !important;
     }
-    
+
     footer {
         width: 90%;
     }
-    
+
     #chat-footer {
         width: 100%;
         height: 50px;
@@ -126,7 +126,7 @@
         background-color: #000000;
         border-radius: 50px;
     }
-    
+
     .input-msg {
         width: 100%;
         border-radius: 15px;
@@ -137,11 +137,11 @@
         outline: none;
         line-height: 1;
     }
-    
+
     .input-msg::placeholder {
         color: hsl(206, 6%, 79%);
     }
-    
+
     .btn-sent {
         position: absolute;
         top: 13px;
@@ -153,15 +153,15 @@
         border: none;
         color: #FFF;
     }
-    
+
     .btn-sent:hover {
         filter: brightness(150%);
     }
-    
+
     .btn-sent:focus {
         outline: none;
     }
-    
+
     .botSMS {
         background-color: #717C89;
         padding: 20px;
