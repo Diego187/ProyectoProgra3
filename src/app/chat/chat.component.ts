@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {catchError} from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
-
+import {BehaviorSubject, Observable, Subject} from 'rxjs';
 
 
 @Component({
@@ -12,15 +12,14 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class ChatComponent implements OnInit {
   user:any={};
-  nameUser = ""
   chat : any = {}
-
-  newMessages:any = {}
-  SMS = ""
+  SMS:any
+  SMS2:any
   newSMS:any={}
-  userBot = "BOT"
-
   messages:any = {}
+  subject = new Subject<any>()
+  nameUser = 'DIBOY1'
+  nameUser2 = 'CCACERES2'
 
   constructor(private http:HttpClient) { }
 
@@ -41,29 +40,60 @@ export class ChatComponent implements OnInit {
     this.messages = this.chat[0].messageList
     console.log(this.messages)
 
+    this.subject.subscribe(data =>{
+      console.log('recibiendo: ' + JSON.stringify(data))
+      this.messages.push(data)
+      console.log(this.messages)
+    });
   }
 
-  sendSMS(){
-    var date = new Date()
-    var month = date.getMonth() + 1
-
-    //var prueba2 = {name:this.channel.name, description:this.channel.description, user:this.user[0].user, userIdclient:this.user[0].idclient}
-
+  sendSMS1(){
 
     if(this.SMS == "" || this.SMS == " "){
-
     }
-    else{
-      this.newSMS = {date: date.getDate()+"/"+month+"/"+date.getFullYear(), time: date.getHours()+":"+date.getMinutes(), userUser: this.nameUser, message: this.SMS,
-      channelIdchannel:this.chat[0].idchannel, userIdclient:this.user[0].idclient}
-      this.messages.push(this.newSMS)
-
+    else {
+      var date = new Date()
+      var month = date.getMonth() + 1
+      this.newSMS = {
+        date: date.getDate() + "/" + month + "/" + date.getFullYear(),
+        time: date.getHours() + ":" + date.getMinutes(),
+        userUser: "DIBOY1",
+        message: this.SMS,
+        channelIdchannel: this.chat[0].idchannel,
+        userIdclient: 1
+      }
 
       console.log(this.newSMS)
-      console.log(this.messages)
-      this.saveSMS()
-      this.SMS=""
+      this.SMS = ''
+      this.subSMS()
     }
+  }
+
+  sendSMS2(){
+    if(this.SMS == "" || this.SMS == " "){
+    }
+    else {
+      var date = new Date()
+      var month = date.getMonth() + 1
+      this.newSMS = {
+        date: date.getDate() + "/" + month + "/" + date.getFullYear(),
+        time: date.getHours() + ":" + date.getMinutes(),
+        userUser: "CCACERES2",
+        message: this.SMS2,
+        channelIdchannel: this.chat[0].idchannel,
+        userIdclient: 2
+      }
+
+      console.log(this.newSMS)
+      this.SMS2 = ''
+      this.subSMS()
+    }
+  }
+
+  subSMS(){
+    this.saveSMS()
+
+    this.subject.next(this.newSMS)
   }
 
   saveSMS(){

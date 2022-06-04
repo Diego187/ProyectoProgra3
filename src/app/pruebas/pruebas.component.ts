@@ -49,25 +49,46 @@ export class PruebasComponent implements OnInit {
   }
 
   sendSMS1(){
-    var date = new Date()
-    var month = date.getMonth() + 1
-    this.newSMS = {date: date.getDate()+"/"+month+"/"+date.getFullYear(), time: date.getHours()+":"+date.getMinutes(), userUser: "DIBOY1", message: this.SMS,
-      channelIdchannel:this.chat[0].idchannel, userIdclient:1}
 
-    console.log(this.newSMS)
-    this.SMS = ''
-    this.subSMS()
+    if(this.SMS == "" || this.SMS == " "){
+    }
+    else {
+      var date = new Date()
+      var month = date.getMonth() + 1
+      this.newSMS = {
+        date: date.getDate() + "/" + month + "/" + date.getFullYear(),
+        time: date.getHours() + ":" + date.getMinutes(),
+        userUser: "DIBOY1",
+        message: this.SMS,
+        channelIdchannel: this.chat[0].idchannel,
+        userIdclient: 1
+      }
+
+      console.log(this.newSMS)
+      this.SMS = ''
+      this.subSMS()
+    }
   }
 
   sendSMS2(){
-    var date = new Date()
-    var month = date.getMonth() + 1
-    this.newSMS = {date: date.getDate()+"/"+month+"/"+date.getFullYear(), time: date.getHours()+":"+date.getMinutes(), userUser: "CCACERES2", message: this.SMS2,
-      channelIdchannel:this.chat[0].idchannel, userIdclient:2}
+    if(this.SMS == "" || this.SMS == " "){
+    }
+    else {
+      var date = new Date()
+      var month = date.getMonth() + 1
+      this.newSMS = {
+        date: date.getDate() + "/" + month + "/" + date.getFullYear(),
+        time: date.getHours() + ":" + date.getMinutes(),
+        userUser: "CCACERES2",
+        message: this.SMS2,
+        channelIdchannel: this.chat[0].idchannel,
+        userIdclient: 2
+      }
 
-    console.log(this.newSMS)
-    this.SMS2 = ''
-    this.subSMS()
+      console.log(this.newSMS)
+      this.SMS2 = ''
+      this.subSMS()
+    }
   }
 
   subSMS(){

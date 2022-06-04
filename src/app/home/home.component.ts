@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
 
   formatChatOne(res:any){
     localStorage.setItem("chat",JSON.stringify(res))
-    location.href="/pruebas"
+    location.href="/chat"
   }
 
   formatChat(res:any){

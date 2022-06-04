@@ -2,10 +2,10 @@ footer {
     position: fixed;
     bottom: 0;
     z-index: 999999;
+    width: 39%;
 }
 
 input {
-    width: 1300px;
 }
 
 
@@ -136,9 +136,6 @@ body {
     color: #26ccff !important;
 }
 
-footer {
-    width: 90%;
-}
 
 #chat-footer {
     width: 100%;
