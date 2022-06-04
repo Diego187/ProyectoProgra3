@@ -10,7 +10,6 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class UserEditionComponent implements OnInit {
   users:any={};
-  // respuesta:String="";
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -19,7 +18,7 @@ export class UserEditionComponent implements OnInit {
     this.users = this.users[0];
   }
 
-  consult(){ 
+  consult(){
     location.href="/";
   }
 
@@ -43,9 +42,7 @@ export class UserEditionComponent implements OnInit {
   }
 
   confirmCreation(res:any){
-    console.log(res)
     if(res=="e"){
-      console.log("Error peticion");
     }else{
     this.users = {};
     alert("Usuario: "+res.user+" editado con exito, por favor autenticate de nuevo")
@@ -53,5 +50,4 @@ export class UserEditionComponent implements OnInit {
     location.href=""
   }
   }
-} 
-  
+}

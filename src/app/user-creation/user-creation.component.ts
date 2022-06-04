@@ -10,7 +10,6 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class UserCreationComponent implements OnInit {
   users:any={};
-  // respuesta:String="";
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -40,7 +39,6 @@ export class UserCreationComponent implements OnInit {
   }
 
   confirmCreation(res:any){
-    console.log(res)
     if(res=="e"){
       console.log("Error peticion");
     }else{

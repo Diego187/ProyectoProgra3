@@ -35,7 +35,6 @@ export class LoginComponent implements OnInit {
 
       let formularioValido : any = document.getElementById("loginForm");
       if(formularioValido.reportValidity()){
-
         this.servicioLogin().subscribe(
           (respuesta:any)=> this.login(respuesta)
         )
@@ -53,7 +52,6 @@ export class LoginComponent implements OnInit {
       }
       else if(res!=null){
         localStorage.setItem("user",JSON.stringify(res));
-        console.log("pasa por diferente de null")
         location.href="/home";
       }
     }

@@ -31,19 +31,12 @@ export class ChatComponent implements OnInit {
     this.user = localStorage.getItem("user");
     this.user = JSON.parse(this.user);
     this.nameUser = this.user[0].user;
-
     this.chat = localStorage.getItem("chat")
     this.chat = JSON.parse(this.chat)
-
-    console.log(this.chat)
-    console.log("MENSAJES")
     this.messages = this.chat[0].messageList
-    console.log(this.messages)
-
     this.subject.subscribe(data =>{
       console.log('recibiendo: ' + JSON.stringify(data))
       this.messages.push(data)
-      console.log(this.messages)
     });
   }
 
@@ -62,8 +55,6 @@ export class ChatComponent implements OnInit {
         channelIdchannel: this.chat[0].idchannel,
         userIdclient: 1
       }
-
-      console.log(this.newSMS)
       this.SMS = ''
       this.subSMS()
     }
@@ -83,8 +74,6 @@ export class ChatComponent implements OnInit {
         channelIdchannel: this.chat[0].idchannel,
         userIdclient: 2
       }
-
-      console.log(this.newSMS)
       this.SMS2 = ''
       this.subSMS()
     }
@@ -92,7 +81,6 @@ export class ChatComponent implements OnInit {
 
   subSMS(){
     this.saveSMS()
-
     this.subject.next(this.newSMS)
   }
 

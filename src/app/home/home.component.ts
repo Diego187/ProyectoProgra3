@@ -25,18 +25,12 @@ export class HomeComponent implements OnInit {
     this.user = localStorage.getItem("user");
     this.user = JSON.parse(this.user);
     this.nameUser = this.user[0].user;
-
-    console.log(this.user)
-    console.log(this.user[0].user);
-
     this.findChats().subscribe(
       (respuesta:any) => this.formatChat(respuesta)
     )
   }
 
   getChat(idChannel:any){
-    console.log(idChannel)
-
     this.findChat(idChannel).subscribe(
       (respuesta:any) => this.formatChatOne(respuesta)
     )
@@ -56,14 +50,12 @@ export class HomeComponent implements OnInit {
 
   formatChatOne(res:any){
     localStorage.setItem("chat",JSON.stringify(res))
-    location.href="/chat"
+    location.href="http://localhost:4201"
   }
 
   formatChat(res:any){
     this.chats = JSON.stringify(res)
     this.chats = JSON.parse(this.chats)
-    console.log("RESPUESTA DE CHATS")
-    console.log(this.chats)
   }
 
   findChats(){
@@ -94,16 +86,12 @@ export class HomeComponent implements OnInit {
     }
 
   let prueba = {"name":this.channel.name, "description":this.channel.description, "user":this.user[0].user, "userIdclient":this.user[0].idclient}
-    console.log(prueba)
-
-  console.log(prueba)
     return this.http.post<any>("http://localhost:4042/chat/add", prueba, httpOptions).pipe(
        catchError(e=>"e")
     )
   }
 
   confirmCreation(res:any){
-    console.log(res)
     if(res=="e"){
       console.log("Error peticion");
     }else{

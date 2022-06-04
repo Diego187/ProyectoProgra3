@@ -33,18 +33,11 @@ export class PruebasComponent implements OnInit {
   cargar(){
     this.chat = localStorage.getItem("chat")
     this.chat = JSON.parse(this.chat)
-
-    console.log(this.chat)
-    console.log("MENSAJES")
     this.idchannel = this.chat.idchannel
     this.messages = this.chat[0].messageList
-    console.log(this.messages)
-
-
     this.subject.subscribe(data =>{
       console.log('recibiendo: ' + JSON.stringify(data))
       this.messages.push(data)
-      console.log(this.messages)
     });
   }
 
