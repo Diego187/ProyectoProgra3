@@ -16,7 +16,7 @@ html{
   font-family: 'DM Sans',sans-serif;
 }
 nav {
-  background: linear-gradient(232deg, #4d40ff, #a94eff);
+  background: linear-gradient(232deg, #393373, #9190d4);
   border: none;
   -webkit-animation: bgAnimateBitcoin 5s ease infinite;
     -moz-animation: bgAnimateBitcoin 5s ease infinite;
@@ -182,7 +182,7 @@ body {
     animation: bgAnimateBitcoin 5s ease infinite;
     background-size: 400% 400%;
     height: 900px;
-    
+
   }
   .cards-container {
     /*grid-template-columns: repeat(auto-fill, 140px);*/
@@ -210,7 +210,7 @@ body {
     padding: 0 15px;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
   }
 
   .product-card img {

@@ -13,7 +13,7 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 nav{
-    background-color: #0d0085;
+  background: linear-gradient(232deg, #393373, #9190d4);
   border: none;
 }
 
@@ -75,7 +75,7 @@ nav{
 }
 
 .primary-button {
-    background-color: #1a9af7;
+    background: #9190d4;
     border-radius: 8px;
     border: none;
     color: #FFFFFF;
